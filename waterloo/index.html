@@ -16,6 +16,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/icons.js"></script>
     <script src="js/waterloo.js"></script>
+    <script src="js/tooltips.js"></script>
 
 </head>
 <body class="table-tex" ng-app="waterloo">
@@ -25,24 +26,32 @@
 <div class="wrapper">
 <div class="main-top w3-row top-bar w3-text-white text-sc">
     <div class="column-106">
-        <div class="garland garland-nl"></div>
+        <div class="garland garland nl"></div>
     </div>
-    <div class="column-478 top-column-content w3-center perkament">
+    <div class="column-478 top-column-content w3-center perkament tooltip no-text">
+        <span class="tooltiptext">
+            Hier staat de deadline voor wanneer jullie de opdracht moeten
+            inleveren.
+        </span>
+
         Deadline 2 september<br>
         16:00
     </div>
     <div class="column-106">
-        <div class="garland garland-nl"></div>
+        <div class="garland garland nl"></div>
     </div>
     <div class="column-668"></div>
     <div class="column-106">
-        <div class="garland garland-nl"></div>
+        <div class="garland garland nl"></div>
     </div>
-    <div class="column-478 top-column-content w3-center perkament">
+    <div class="column-478 top-column-content w3-center perkament tooltip no-text">
+        <span class="tooltiptext">
+            Dit is de titel van het verhaal van deze week.
+        </span>
         Verhaal 1<br>Honger
     </div>
     <div class="column-106">
-        <div class="garland garland-nl"></div>
+        <div class="garland garland nl"></div>
     </div>
 </div>
 
@@ -50,7 +59,7 @@
 
 <div class="main-bottom bottom-bar">
     <div class="column-106">
-        <div class="palm-left palm-nl"></div>
+        <div class="palm nl"></div>
     </div>
 
     <div class="column-478">
@@ -60,25 +69,42 @@
             <table class="button-table">
                 <tr>
                     <td class="td">
-                        <div class="button-l king-off"></div>
+                        <div class="button-l soldiers nl tooltip">
+                            <span class="tooltiptext">
+                                Met deze knop kun je soldaten kopen voor je
+                                legers en steden.
+                            </span>
+                        </div>
                     </td>
                     <td class="td">
-                        <div class="button-l message-off"></div>
+                        <div class="button-l message nl tooltip">
+                            <span class="tooltiptext">
+                                Met deze knop open je het berichten venster.
+                            </span>
+                        </div>
                     </td>
                 </tr>
             </table>
         </div>
         <div class="column-hbar"></div>
         <div class="column-bottom text-sc">
-            <table class="button-table w3-center perkament">
+            <table class="button-table w3-center perkament no-text">
                 <tr>
-                    <td class="w3-text-white">
+                    <td class="w3-text-white tooltip">
                         10000 Goudfrancs
+                        <span class="tooltiptext">
+                            Dit zijn het aantal Goudfrancs dat we op dit moment
+                            hebben.
+                        </span>
                     </td>
                 </tr>
                 <tr>
-                    <td class="w3-text-green">
+                    <td class="w3-text-green tooltip">
                         + 10000
+                        <span class="tooltiptext">
+                            Dit zijn het aantal Goudfrancs dat we in de
+                            afgelopen beurt hebben verdient.
+                        </span>
                     </td>
                 </tr>
             </table>
@@ -86,7 +112,7 @@
     </div>
 
     <div class="column-106">
-        <div class="palm-left palm-nl"></div>
+        <div class="palm nl"></div>
     </div>
 
     <div class="column-668">
@@ -96,18 +122,41 @@
         <div class="column-bottom w3-text-white w3-center text-sc">
             <table class="button-table">
                 <tr>
-                    <td colspan="3">
+                    <td colspan="3" class="tooltip no-text">
                         Groningen
+                        <span class="tooltiptext">
+                            De naam van de stad of het leger.
+                        </span>
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td class="tooltip no-text">
+                        <span class="tooltiptext">
+                            De kracht van een leger of stad. Als een leger een
+                            stad of ander leger aanvalt, dan wint degene met de
+                            meeste kracht.
+                        </span>
                         <i class="fas fa-shield-alt"></i>&nbsp;20
                     </td>
-                    <td>
+                    <td class="tooltip no-text">
+                        <span class="tooltiptext">
+                            Energie van een leger of stad. Dit geeft hoeveel
+                            hokjes een leger kan lopen. Steden en forten kunnen
+                            zich niet verplaatsen.<br>
+                            Hoeveel "kost" een hokje?<br>
+                            Water: 1<br>
+                            Land: 2<br>
+                            Heuvels: 3<br>
+                            Bergen: 4<br>
+                            Rivieren: 5<br>
+                        </span>
                         <i class="fas fa-bolt"></i>&nbsp;15
                     </td>
-                    <td>
+                    <td class="tooltip no-text">
+                        <span class="tooltiptext">
+                            Zicht van een stad of leger. Dit geeft aan hoeveel
+                            hokjes het leger of stad om zicht heen kan kijken.
+                        </span>
                         <i class="fas fa-binoculars"></i>&nbsp;10
                     </td>
                 </tr>
@@ -116,7 +165,7 @@
     </div>
 
     <div class="column-106">
-        <div class="palm-right palm-nl"></div>
+        <div class="palm nl"></div>
     </div>
 
     <div class="column-478">
@@ -126,24 +175,56 @@
             <table class="button-table">
                 <tr>
                     <td class="td">
-                        <div class="button balloon-off"></div>
+                        <div class="button balloon nl tooltip">
+                            <span class="tooltiptext">
+                                De luchtballon kan gebruikt worden om het zicht
+                                van één eigen leger of stad te vergroten.
+                            </span>
+                        </div>
                     </td>
                     <td class="td">
-                        <div class="button king-off"></div>
+                        <div class="button king nl tooltip">
+                            <span class="tooltiptext">
+                                De vorst kan gebruikt worden om één eigen leger
+                                sterker te maken.
+                            </span></div>
                     </td>
                     <td class="td">
-                        <div class="button spy-off"></div>
+                        <div class="button spy nl tooltip">
+                            <span class="tooltiptext">
+                                De spion kan gebruikt worden om één vijandig
+                                leger te saboteren. Deze doet dan één beurt niet
+                                mee.
+                            </span>
+                        </div>
                     </td>
                 </tr>
                 <tr>
                     <td class="td">
-                        <div class="button fort-off"></div>
+                        <div class="button fort nl tooltip">
+                            <span class="tooltiptext">
+                                Een fort kan gebouwd worden op een strategische
+                                plaats. Soldaten in een fort zijn drie keer zo
+                                sterk als soldaten in een leger.
+                            </span>
+                        </div>
                     </td>
                     <td class="td">
-                        <div class="button alliance-off"></div>
+                        <div class="button alliance nl tooltip">
+                            <span class="tooltiptext">
+                                Je kunt allianties sluiten met andere landen om
+                                samen te vechten tegen sterkere landen.
+                            </span>
+                        </div>
                     </td>
                     <td class="td">
-                        <div class="button secret-off"></div>
+                        <div class="button secret nl tooltip">
+                            <span class="tooltiptext">
+                                De geheime opdracht is een gevaarlijke opdracht
+                                die veel kan opleveren als deze slaagt, maar je
+                                ook veel kan kosten als dat niet lukt.
+                            </span>
+                        </div>
                     </td>
                 </tr>
             </table>
@@ -154,13 +235,24 @@
             <table class="button-table">
                 <tr>
                     <td class="td">
-                        <div class="button balloon-off"></div>
+                        <div class="button book nl tooltip">
+                            <span class="tooltiptext">
+                                Klik hier om het huidige verhaal te lezen en
+                                aan te geven welke opdracht je deze week wilt
+                                maken.
+                            </span>
+                        </div>
                     </td>
                     <td class="td">
-                        <div class="button king-off"></div>
+                        <div class="button statistics nl tooltip">
+                            <span class="tooltiptext">
+                                Met de statistieken knop kun je zien hoe goed
+                                jullie het doen vergeleken met andere landen.
+                            </span>
+                        </div>
                     </td>
                     <td class="td">
-                        <div class="button spy-off"></div>
+                        <!--<div class="button spy-off"></div>-->
                     </td>
                 </tr>
             </table>
@@ -168,12 +260,18 @@
     </div>
 
     <div class="column-106">
-        <div class="palm-right palm-nl"></div>
+        <div class="palm nl"></div>
     </div>
 
 </div>
 </div>
-<div class="crown-container"><div class="crown crown-nl"></div></div>
+<div class="crown-container"><div class="crown crown-nl tooltip">
+    <span class="tooltiptext">
+        Dit is jullie krans. Hier staat in grote letters als
+        welk land jullie spelen.
+    </span>
+</div></div>
+<div class="tooltipbox text-sc w3-hide">Empty text</div>
 </script>
 
 </body>
