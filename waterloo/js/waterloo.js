@@ -74,8 +74,32 @@ function($stateProvider,$urlRouterProvider, $locationProvider)
         }
     });
 
+    $stateProvider.state(
+    {
+        name: 'welcome',
+        url: '/welcome',
+        templateUrl: '/welcome.html',
+        controller: 'WelcomeCtrl',
+        resolve:
+        {
+            // TODO: load data
+        }
+    });
+
+    $stateProvider.state(
+    {
+        name: 'help',
+        url: '/help',
+        templateUrl: '/help.html',
+        controller: 'HelpCtrl',
+        resolve:
+        {
+            // TODO: load data
+        }
+    });
+
 // --- Default Route --------------------------------------------------
-    $urlRouterProvider.otherwise('/main');
+    $urlRouterProvider.otherwise('/welcome');
 }]);
 
 app.factory('canvas', ['$http', function($http)
@@ -121,7 +145,7 @@ app.factory('canvas', ['$http', function($http)
 
     function click(evt)
     {
-        // TODO: check if it was grabbed
+        // TODO check if something was clicked
     }
 
     function move(evt)
@@ -186,9 +210,18 @@ app.factory('canvas', ['$http', function($http)
                 prevX = evt.clientX;
                 prevY = evt.clientY;
                 grabbed = true;
+                $(canvas).removeClass('cursor-grab');
+                $(canvas).addClass('cursor-grabbing');
             });
-            canvas.addEventListener('mouseleave', function() {grabbed = false;});
-            canvas.addEventListener('mouseup', function() {grabbed = false;});
+            canvas.addEventListener('mouseleave', function() {
+                grabbed = false;
+                $(canvas).removeClass('cursor-grabbing');
+                $(canvas).addClass('cursor-grab');
+            });
+            canvas.addEventListener('mouseup', function() {
+                grabbed = false;
+                $(canvas).removeClass('cursor-grabbing');
+                $(canvas).addClass('cursor-grab');});
             canvas.addEventListener('mousemove', move);
             loadImages();
         }
@@ -272,6 +305,22 @@ app.controller('StoryCtrl', [
 ]);
 
 app.controller('ScoreCtrl', [
+    '$scope',
+    function($scope)
+    {
+
+    }
+]);
+
+app.controller('HelpCtrl', [
+    '$scope',
+    function($scope)
+    {
+
+    }
+]);
+
+app.controller('WelcomeCtrl', [
     '$scope',
     function($scope)
     {

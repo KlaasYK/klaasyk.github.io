@@ -14,10 +14,20 @@ h1, h2, h3, h4, h5, h6
     font-family: "Cantata One", serif !important;
 }
 
+.bold
+{
+    font-weight: bold;
+}
+
 .color-dark
 {
     background-color: #504034;
     color: #FFF;
+}
+
+.border-dark
+{
+    border-color: #504034 !important;
 }
 
 .color-light
@@ -43,6 +53,174 @@ h1, h2, h3, h4, h5, h6
     max-width: 125vh;
     box-shadow: 4px 4px 16px 8px #000;
     z-index: 2;
+}
+
+.window-content
+{
+    position: absolute;
+    margin-top: 47px;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+}
+
+.window-table
+{
+    position: absolute;
+    margin-top: 47px;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.window-list
+{
+    height: 100%;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+}
+
+.window-list li
+{
+    padding: 8px 16px;
+    border-bottom: 1px solid #FFF;
+    height: 10%;
+}
+
+.window-chat-history
+{
+    height: 80%;
+    overflow-y: auto;
+    padding: 8px 16px;
+}
+
+.chat-bubble
+{
+    padding: 8px 8px;
+    width: 75%;
+    margin-bottom: 16px;
+    color: #FFF;
+    clear: both;
+    line-height: 2;
+}
+
+.chat-line
+{
+    margin-bottom: 8px;
+    font-size: 0.8em;
+    line-height: 1;
+}
+
+.chat-bubble.right
+{
+    float: right;
+}
+
+.recrute-row
+{
+    width: 100%;
+    height: 40%;
+}
+
+.recrute-total
+{
+    width: 100%;
+    height: 20%;
+    color: #FFF;
+    padding: 8px 16px;
+}
+
+.portrait
+{
+    width: 100%;
+    height: 80%;
+    background-size: auto 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.recrute-buttons
+{
+    width: 100%;
+    height: 20%;
+}
+
+.recrute-btn
+{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 4px 0px;
+    width: 100%;
+    text-align: center;
+    color: #FFF;
+    background-color: #504034;
+    outline: 1px solid #fff200;
+}
+
+.recrute-btn:hover
+{
+    cursor: pointer;
+    box-shadow: 0px 0px 2px 2px #fff200;
+}
+
+.fuselier.nl
+{
+    background-image: url('../images/country_soldier/fuselier_nl.png');
+}
+
+.jager.nl
+{
+    background-image: url('../images/country_soldier/jager_nl.png');
+}
+
+.grenadier.nl
+{
+    background-image: url('../images/country_soldier/grenadier_nl.png');
+}
+
+.commander.nl
+{
+    background-image: url('../images/country_soldier/commander_nl.png');
+}
+
+
+
+.window-chat-box
+{
+    height: 20%;
+}
+
+.chat-input
+{
+    padding: 8px;
+    height: 100%;
+    resize: none;
+    border: none;
+    color: #FFF;
+}
+
+.chat-send
+{
+    height: 100%;
+    background-color: #f06000;
+    text-align: center;
+    cursor: pointer;
+
+}
+.chat-send i
+{
+    display: block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.window-list li:last-child
+{
+    border-bottom: none;
 }
 
 .window-title
@@ -81,6 +259,21 @@ h1, h2, h3, h4, h5, h6
     /* height: 63.281%;*/
     /*height: 68.577%;*/
     height: 100%;
+}
+
+.cursor-grab
+{
+    cursor: grab;
+}
+
+.cursor-grabbing
+{
+    cursor: grabbing;
+}
+
+.cursor-pointer
+{
+    cursor: pointer;
 }
 
 .main-bottom
@@ -417,6 +610,11 @@ h1, h2, h3, h4, h5, h6
 .message.nl
 {
     background-image: url("../images/buttons/message_nl.png");
+}
+
+.help.nl
+{
+    background-image: url("../images/buttons/help_nl.png");
 }
 
 /* Utility */
