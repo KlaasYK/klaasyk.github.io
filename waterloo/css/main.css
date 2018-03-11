@@ -9,6 +9,54 @@ html, body
     font-family: "Cantata One", serif;
 }
 
+h1, h2, h3, h4, h5, h6
+{
+    font-family: "Cantata One", serif !important;
+}
+
+.color-dark
+{
+    background-color: #504034;
+    color: #FFF;
+}
+
+.color-light
+{
+    background-color: #655041;
+    color: #FFF;
+}
+
+.color-gold
+{
+    background-color: #ffc90e;
+    color: #000;
+}
+
+.window
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    height: 85vh;
+    max-width: 125vh;
+    box-shadow: 4px 4px 16px 8px #000;
+    z-index: 2;
+}
+
+.window-title
+{
+    position: relative;
+}
+
+.close-btn
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 .wrapper
 {
     position: relative;
@@ -181,9 +229,30 @@ html, body
     background-image: url("../images/country_detail/palm_nl.png");
 }
 
+
+
+.coa
+{
+    height: 100%;
+    width: 100%;
+
+    background-position: center 30%;
+    background-repeat: no-repeat;
+    background-size: auto 65%;
+}
+
+.coa-left-nl
+{
+    background-image: url("../images/country_detail/coa_left_nl.png");
+}
+
+.coa-right-nl
+{
+    background-image: url("../images/country_detail/coa_right_nl.png");
+}
+
 .garland
 {
-    margin: 0px; auto;
     height: 100%;
     width: 100%;
 

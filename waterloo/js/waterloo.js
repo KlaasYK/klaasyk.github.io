@@ -26,6 +26,54 @@ function($stateProvider,$urlRouterProvider, $locationProvider)
         }
     });
 
+    $stateProvider.state(
+    {
+        name: 'recrute',
+        url: '/recrute',
+        templateUrl: '/recrute.html',
+        controller: 'RecruteCtrl',
+        resolve:
+        {
+            // TODO: load data
+        }
+    });
+
+    $stateProvider.state(
+    {
+        name: 'messages',
+        url: '/messages',
+        templateUrl: '/messages.html',
+        controller: 'MessageCtrl',
+        resolve:
+        {
+            // TODO: load data
+        }
+    });
+
+    $stateProvider.state(
+    {
+        name: 'story',
+        url: '/story',
+        templateUrl: '/story.html',
+        controller: 'StoryCtrl',
+        resolve:
+        {
+            // TODO: load data
+        }
+    });
+
+    $stateProvider.state(
+    {
+        name: 'score',
+        url: '/score',
+        templateUrl: '/score.html',
+        controller: 'ScoreCtrl',
+        resolve:
+        {
+            // TODO: load data
+        }
+    });
+
 // --- Default Route --------------------------------------------------
     $urlRouterProvider.otherwise('/main');
 }]);
@@ -33,6 +81,8 @@ function($stateProvider,$urlRouterProvider, $locationProvider)
 app.factory('canvas', ['$http', function($http)
 {
     var o = {}; // interface binding
+
+    var init = false;
 
     // Map dimensions
     const NCOLS = 123;
@@ -124,21 +174,26 @@ app.factory('canvas', ['$http', function($http)
 
     o.init = function()
     {
-        console.log('init');
-        resetDims();
-        // TODO: add timeout wrapper!
-        window.addEventListener('resize', function() {o.redraw(true);});
-        canvas.addEventListener('click', click);
-        canvas.addEventListener('mousedown', function(evt)
+        if (!init)
         {
-            prevX = evt.clientX;
-            prevY = evt.clientY;
-            grabbed = true;
-        });
-        canvas.addEventListener('mouseleave', function() {grabbed = false;});
-        canvas.addEventListener('mouseup', function() {grabbed = false;});
-        canvas.addEventListener('mousemove', move);
-        loadImages();
+            console.log('init');
+            resetDims();
+            // TODO: add timeout wrapper!
+            window.addEventListener('resize', function() {o.redraw(true);});
+            canvas.addEventListener('click', click);
+            canvas.addEventListener('mousedown', function(evt)
+            {
+                prevX = evt.clientX;
+                prevY = evt.clientY;
+                grabbed = true;
+            });
+            canvas.addEventListener('mouseleave', function() {grabbed = false;});
+            canvas.addEventListener('mouseup', function() {grabbed = false;});
+            canvas.addEventListener('mousemove', move);
+            loadImages();
+        }
+
+        init = true;
     }
 
     function drawBack()
@@ -189,5 +244,37 @@ app.controller('MainCtrl', [
     function($scope, canvas)
     {
         canvas.init();
+    }
+]);
+
+app.controller('RecruteCtrl', [
+    '$scope',
+    function($scope)
+    {
+
+    }
+]);
+
+app.controller('MessageCtrl', [
+    '$scope',
+    function($scope)
+    {
+
+    }
+]);
+
+app.controller('StoryCtrl', [
+    '$scope',
+    function($scope)
+    {
+
+    }
+]);
+
+app.controller('ScoreCtrl', [
+    '$scope',
+    function($scope)
+    {
+
     }
 ]);

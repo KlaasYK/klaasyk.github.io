@@ -20,29 +20,26 @@
 
 </head>
 <body class="table-tex" ng-app="waterloo">
-<ui-view></ui-view>
 
-<script type="text/ng-template" id="/main.html">
 <div class="wrapper">
 <div class="main-top w3-row top-bar w3-text-white text-sc">
     <div class="column-106">
-        <div class="garland garland nl"></div>
+        <div class="coa coa-left-nl"></div>
     </div>
     <div class="column-478 top-column-content w3-center perkament tooltip no-text">
         <span class="tooltiptext">
-            Hier staat de deadline voor wanneer jullie de opdracht moeten
-            inleveren.
+            Hier staan mededelingen die belangrijk zijn voor het spel.
         </span>
 
         Deadline 2 september<br>
         16:00
     </div>
     <div class="column-106">
-        <div class="garland garland nl"></div>
+        <div class="coa coa-left-nl"></div>
     </div>
     <div class="column-668"></div>
     <div class="column-106">
-        <div class="garland garland nl"></div>
+        <div class="coa coa-right-nl"></div>
     </div>
     <div class="column-478 top-column-content w3-center perkament tooltip no-text">
         <span class="tooltiptext">
@@ -51,7 +48,7 @@
         Verhaal 1<br>Honger
     </div>
     <div class="column-106">
-        <div class="garland garland nl"></div>
+        <div class="coa coa-right-nl"></div>
     </div>
 </div>
 
@@ -69,19 +66,18 @@
             <table class="button-table">
                 <tr>
                     <td class="td">
-                        <div class="button-l soldiers nl tooltip">
+                        <a ui-sref="recrute"><div class="button-l soldiers nl tooltip">
                             <span class="tooltiptext">
-                                Met deze knop kun je soldaten kopen voor je
-                                legers en steden.
+                                Met deze knop kun je soldaten rekruteren voor de bataljons, forten en steden.
                             </span>
-                        </div>
+                        </div></a>
                     </td>
                     <td class="td">
-                        <div class="button-l message nl tooltip">
+                        <a ui-sref="messages"><div class="button-l message nl tooltip">
                             <span class="tooltiptext">
-                                Met deze knop open je het berichten venster.
+                                Met deze knop kun je kijken of er berichten zijn en je kunt ook zelf berichten versturen.
                             </span>
-                        </div>
+                        </div></a>
                     </td>
                 </tr>
             </table>
@@ -185,8 +181,8 @@
                     <td class="td">
                         <div class="button king nl tooltip">
                             <span class="tooltiptext">
-                                De vorst kan gebruikt worden om één eigen leger
-                                sterker te maken.
+                                De vorst kan gebruikt worden om een bataljon, fort of stad sterker te maken.
+                                Bataljons kunnen 2 x zover lopen.
                             </span></div>
                     </td>
                     <td class="td">
@@ -235,21 +231,21 @@
             <table class="button-table">
                 <tr>
                     <td class="td">
-                        <div class="button book nl tooltip">
+                        <a ui-sref="story"><div class="button book nl tooltip">
                             <span class="tooltiptext">
                                 Klik hier om het huidige verhaal te lezen en
                                 aan te geven welke opdracht je deze week wilt
                                 maken.
                             </span>
-                        </div>
+                        </div></a>
                     </td>
                     <td class="td">
-                        <div class="button statistics nl tooltip">
+                        <a ui-sref="score"><div class="button statistics nl tooltip">
                             <span class="tooltiptext">
                                 Met de statistieken knop kun je zien hoe goed
                                 jullie het doen vergeleken met andere landen.
                             </span>
-                        </div>
+                        </div></a>
                     </td>
                     <td class="td">
                         <!--<div class="button spy-off"></div>-->
@@ -265,13 +261,59 @@
 
 </div>
 </div>
-<div class="crown-container"><div class="crown crown-nl tooltip">
+
+<div class="crown-container">
+<div class="crown crown-nl tooltip">
     <span class="tooltiptext">
         Dit is jullie krans. Hier staat in grote letters als
         welk land jullie spelen.
     </span>
-</div></div>
+</div>
+</div>
+
 <div class="tooltipbox text-sc w3-hide">Empty text</div>
+
+<!-- popup window -->
+<ui-view></ui-view>
+
+<script type="text/ng-template" id="/main.html">
+<!--empty-->
+</script>
+
+<script type="text/ng-template" id="/recrute.html">
+<div class="window color-light">
+    <header class="w3-container color-dark window-title w3-row">
+        <h5 class="w3-half">Soldaten rekruteren</h5>
+        <h5 class="w3-half w3-right-align"><a ui-sref="main"><i class="fas fa-times"></i></a></h5>
+    </header>
+</div>
+</script>
+
+<script type="text/ng-template" id="/messages.html">
+<div class="window color-light">
+    <header class="w3-container color-dark window-title w3-row">
+        <h5 class="w3-half">Berichten</h5>
+        <h5 class="w3-half w3-right-align"><a ui-sref="main"><i class="fas fa-times"></i></a></h5>
+    </header>
+</div>
+</script>
+
+<script type="text/ng-template" id="/score.html">
+<div class="window color-light">
+    <header class="w3-container color-dark window-title w3-row">
+        <h5 class="w3-half">Statistieken</h5>
+        <h5 class="w3-half w3-right-align"><a ui-sref="main"><i class="fas fa-times"></i></a></h5>
+    </header>
+</div>
+</script>
+
+<script type="text/ng-template" id="/story.html">
+<div class="window color-light">
+    <header class="w3-container color-dark window-title w3-row text">
+        <h5 class="w3-half">Verhaal</h5>
+        <h5 class="w3-half w3-right-align"><a ui-sref="main"><i class="fas fa-times"></i></a></h5>
+    </header>
+</div>
 </script>
 
 </body>
