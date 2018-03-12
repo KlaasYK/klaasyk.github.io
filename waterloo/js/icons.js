@@ -5,7 +5,11 @@ const IMG_URI =
         uri: 'images/map_c4_85.jpg'
     },
     {
-        img: 'nl-city',
-        uri: 'images/units/nl_city.png'
+        img: 'city-nl',
+        uri: 'images/icons/city_nl.png'
+    },
+    {
+        img: 'city-neutral',
+        uri: 'images/icons/city_neutral.png'
     }
 ];

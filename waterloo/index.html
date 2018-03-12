@@ -121,23 +121,23 @@
                     <td colspan="3" class="tooltip no-text">
                         Groningen
                         <span class="tooltiptext">
-                            De naam van de stad of het leger.
+                            De naam van de stad of het bataljon.
                         </span>
                     </td>
                 </tr>
                 <tr>
                     <td class="tooltip no-text">
                         <span class="tooltiptext">
-                            De kracht van een leger of stad. Als een leger een
-                            stad of ander leger aanvalt, dan wint degene met de
+                            De kracht van een bataljon of stad. Als een bataljon een
+                            stad of ander bataljon aanvalt, dan wint degene met de
                             meeste kracht.
                         </span>
                         <i class="fas fa-shield-alt"></i>&nbsp;20
                     </td>
                     <td class="tooltip no-text">
                         <span class="tooltiptext">
-                            Energie van een leger of stad. Dit geeft hoeveel
-                            hokjes een leger kan lopen. Steden en forten kunnen
+                            Energie van een bataljon. Dit geeft hoeveel
+                            hokjes een bataljon kan lopen. Steden en forten kunnen
                             zich niet verplaatsen.<br>
                             Hoeveel "kost" een hokje?<br>
                             Water: 1<br>
@@ -150,8 +150,8 @@
                     </td>
                     <td class="tooltip no-text">
                         <span class="tooltiptext">
-                            Zicht van een stad of leger. Dit geeft aan hoeveel
-                            hokjes het leger of stad om zicht heen kan kijken.
+                            Zicht van een stad of batljon. Dit geeft aan hoeveel
+                            hokjes het bataljon of stad om zicht heen kan kijken (de lichte cirkel).
                         </span>
                         <i class="fas fa-binoculars"></i>&nbsp;10
                     </td>
@@ -174,7 +174,7 @@
                         <div class="button balloon nl tooltip">
                             <span class="tooltiptext">
                                 De luchtballon kan gebruikt worden om het zicht
-                                van één eigen leger of stad te vergroten.
+                                van één eigen bataljon of stad te vergroten.
                             </span>
                         </div>
                     </td>
@@ -188,9 +188,8 @@
                     <td class="td">
                         <div class="button spy nl tooltip">
                             <span class="tooltiptext">
-                                De spion kan gebruikt worden om één vijandig
-                                leger te saboteren. Deze doet dan één beurt niet
-                                mee.
+                                De spion kan gebruikt worden om de commandant van één vijandig bataljon om te kopen.
+                                Deze doet dan één beurt niet mee.
                             </span>
                         </div>
                     </td>
@@ -201,7 +200,7 @@
                             <span class="tooltiptext">
                                 Een fort kan gebouwd worden op een strategische
                                 plaats. Soldaten in een fort zijn drie keer zo
-                                sterk als soldaten in een leger.
+                                sterk als soldaten in een bataljon.
                             </span>
                         </div>
                     </td>
@@ -269,7 +268,7 @@
 <div class="crown-container">
 <div class="crown crown-nl tooltip">
     <span class="tooltiptext">
-        Dit is jullie krans. Hier staat in grote letters als
+        Dit is jullie krans. Hier staat in grote letters met
         welk land jullie spelen.
     </span>
 </div>
@@ -291,82 +290,186 @@
         <h5 class="w3-half w3-right-align"><a ui-sref="main"><i class="fas fa-times"></i></a></h5>
     </header>
     <div class="w3-row window-table">
-        <ul class="w3-col m3 w3-rightbar border-dark text-sc window-list">
-            <li>Amsterdam</li>
-            <li>Brussel</li>
-            <li>Groningen</li>
-            <li>Maastricht</li>
-            <li>Eerste bataljon</li>
-            <li>Tweede bataljon</li>
-            <li>Derde bataljon</li>
-            <li>Eerste bataljon</li>
-            <li>Tweede bataljon</li>
-            <li>Derde bataljon</li>
-            <li>Eerste bataljon</li>
-            <li>Tweede bataljon</li>
-            <li>Derde bataljon</li>
-            <li>Eerste bataljon</li>
-            <li>Tweede bataljon</li>
-            <li>Derde bataljon</li>
+        <ul class="w3-col m4 w3-rightbar border-dark text-sc window-list">
+            <li>
+                <div class="w3-left recrute-icon city nl"></div>
+                <div class="w3-left v-center">
+                    Amsterdam
+                </div>
+            </li>
+            <li>
+                <div class="w3-left recrute-icon city nl"></div>
+                <div class="w3-left v-center">
+                    Brussel
+                </div>
+            </li>
+            <li class="active">
+                <div class="w3-left recrute-icon city nl"></div>
+                <div class="w3-left v-center">
+                    Groningen
+                </div>
+            </li>
+            <li>
+                <div class="w3-left recrute-icon city nl"></div>
+                <div class="w3-left v-center">
+                    Maastricht
+                </div>
+            </li>
+            <li>
+                <div class="w3-left recrute-icon fort nl"></div>
+                <div class="w3-left v-center">
+                    Kijkduin
+                </div>
+            </li>
+            <li>
+                <div class="w3-left recrute-icon army nl"></div>
+                <div class="w3-left v-center">
+                    Eerste regiment
+                </div>
+            </li>
+            <li>
+                <div class="w3-left recrute-icon army nl"></div>
+                <div class="w3-left v-center">
+                    Tweede regiment
+                </div>
+            </li>
+            <li>
+                <div class="w3-left recrute-icon army nl"></div>
+                <div class="w3-left v-center">
+                    Derde regiment
+                </div>
+            </li>
+
         </ul>
-        <div class="w3-col m9 fh">
+        <div class="w3-col m8 fh">
             <div class="recrute-row">
                 <div class="w3-half fh">
-                    <div class="portrait fuselier nl"></div>
-                    <div class="w3-row-padding recrute-buttons">
+                    <div class="w3-row data-row">
+                        <div class="w3-half text-sc w3-padding">
+                            Fuselier<br><br>
+                            <i class="fas fa-shield-alt fa-fw"></i>&nbsp;1<br>
+                            <i class="fas fa-bolt fa-fw"></i>&nbsp;10<br>
+                            <i class="fas fa-binoculars fa-fw"></i>&nbsp;10<br>
+                            <i class="fas fa-users fa-fw"></i>&nbsp;10
+                        </div>
+                        <div class="w3-half portrait fuselier nl ttip">
+                            <span class="ttip-left text-sc">
+                                Fuseliers zijn de "normale" soldaten. Goedkoop, maar blinken nergens in uit.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="w3-row-padding recrute-buttons text-sc">
                         <div class="w3-col s6 fh">
-                            <div class="recrute-btn">
+                            <div class="recrute-btn ttip">
+                                <div class="ttip-content">
+                                    +150<br>Goudfrancs
+                                </div>
                                 ontsla
                             </div>
                         </div>
                         <div class="w3-col s6 fh">
-                            <div class="recrute-btn">
+                            <div class="recrute-btn ttip">
+                                <div class="ttip-content">
+                                    -200<br>Goudfrancs
+                                </div>
                                 rekruteer
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="w3-half fh">
-                    <div class="portrait jager nl"></div>
-                    <div class="w3-row-padding recrute-buttons">
+                    <div class="w3-row data-row">
+                        <div class="w3-half text-sc w3-padding">
+                            Jager<br><br>
+                            <i class="fas fa-shield-alt fa-fw"></i>&nbsp;1<br>
+                            <i class="fas fa-bolt fa-fw"></i>&nbsp;15<br>
+                            <i class="fas fa-binoculars fa-fw"></i>&nbsp;15<br>
+                            <i class="fas fa-users fa-fw"></i>&nbsp;0
+                        </div>
+                        <div class="w3-half portrait jager nl ttip">
+                            <span class="ttip-left text-sc">
+                                Jagers zijn snelle soldaten met een lichte bepakking. Net zo sterk als fuseliers, maar wel duurder.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="w3-row-padding recrute-buttons text-sc">
                         <div class="w3-col s6 fh">
-                            <div class="recrute-btn">
+                            <div class="recrute-btn ttip">
+                                <div class="ttip-content">
+                                    +200<br>Goudfrancs
+                                </div>
                                 ontsla
                             </div>
                         </div>
                         <div class="w3-col s6 fh">
-                            <div class="recrute-btn">
+                            <div class="recrute-btn ttip">
+                                <div class="ttip-content">
+                                    -300<br>Goudfrancs
+                                </div>
                                 rekruteer
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="recrute-row">
-                <div class="w3-half fh">
-                    <div class="portrait grenadier nl"></div>
-                    <div class="w3-row-padding recrute-buttons">
-                        <div class="w3-col s6 fh">
-                            <div class="recrute-btn">
-                                ontsla
-                            </div>
-                        </div>
-                        <div class="w3-col s6 fh">
-                            <div class="recrute-btn">
-                                rekruteer
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="w3-half fh">
-                    <div class="portrait commander nl"></div>
-                    <div class="recrute-buttons w3-center">
-                        Naam van Commandant
                     </div>
                 </div>
             </div>
 
-            <div class="recrute-total w3-topbar border-dark">
+
+            <div class="recrute-row">
+                <div class="w3-half fh">
+                    <div class="w3-row data-row">
+                        <div class="w3-half text-sc w3-padding">
+                            Grenadier<br><br>
+                            <i class="fas fa-shield-alt fa-fw"></i>&nbsp;2<br>
+                            <i class="fas fa-bolt fa-fw"></i>&nbsp;8<br>
+                            <i class="fas fa-binoculars fa-fw"></i>&nbsp;10<br>
+                            <i class="fas fa-users fa-fw"></i>&nbsp;0
+                        </div>
+                        <div class="w3-half portrait grenadier nl ttip">
+                            <span class="ttip-left text-sc">
+                                Grenadiers zijn de sterkste soldaten. Door de extra bepakking die ze meenemen zijn ze wel een stuk langzamer.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="w3-row-padding recrute-buttons text-sc">
+                        <div class="w3-col s6 fh">
+                            <div class="recrute-btn ttip">
+                                <div class="ttip-content">
+                                    +200<br>Goudfrancs
+                                </div>
+                                ontsla
+                            </div>
+                        </div>
+                        <div class="w3-col s6 fh">
+                            <div class="recrute-btn ttip">
+                                <div class="ttip-content">
+                                    -300<br>Goudfrancs
+                                </div>
+                                rekruteer
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w3-half fh">
+                    <div class="w3-row data-row">
+                        <div class="w3-half text-sc w3-padding">
+                            "Rang van commandant"<br><br>
+                            Bonus:<br>
+                            <i class="fas fa-shield-alt fa-fw"></i>&nbsp;1.0&times;<br>
+                            <i class="fas fa-bolt fa-fw"></i>&nbsp;1.0&times;<br>
+                            <i class="fas fa-binoculars fa-fw"></i>&nbsp;1.0&times;
+                        </div>
+                        <div class="w3-half portrait commander nl ttip">
+                            <span class="ttip-left text-sc">
+                                Commandanten hebben de leiding over bataljons. Ze bieden bonussen voor de eigenschappen van bataljons. Hoe hoger de rang des te groter de bonus.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="w3-row-padding recrute-buttons text-sc">
+                        Naam van commandant
+                    </div>
+                </div>
+            </div>
+            <div class="recrute-total w3-topbar border-dark text-sc">
                 <div class="w3-container w3-center w3-margin-bottom">
                     Groningen
                 </div>
@@ -398,20 +501,70 @@
     </header>
 
     <div class="w3-row window-table">
-        <ul class="w3-col m3 w3-rightbar border-dark text-sc window-list">
-            <li>Nieuws</li>
-            <li>Frankrijk</li>
-            <li>Verenigd Koninkrijk</li>
-            <li>Oostenrijk</li>
-            <li>Pruisen</li>
-            <li>Rusland</li>
-            <li>Polen</li>
-            <li>Zweden</li>
-            <li>Italië</li>
-            <li>Congres van Wenen*</li>
+        <ul class="w3-col m4 w3-rightbar border-dark text-sc window-list">
+            <li>
+                <div class="w3-left flag news"></div>
+                <div class="w3-left v-center">
+                    Nieuws
+                </div>
+            </li>
+            <li class="active">
+                <div class="w3-left flag fr"></div>
+                <div class="w3-left v-center">
+                    Frankrijk
+                </div>
+            </li>
+            <li>
+                <div class="w3-left flag uk"></div>
+                <div class="w3-left v-center">
+                    Verenigd Koninkrijk
+                </div>
+            </li>
+            <li>
+                <div class="w3-left flag at"></div>
+                <div class="w3-left v-center">
+                    Oostenrijk
+                </div>
+            </li>
+            <li>
+                <div class="w3-left flag pr"></div>
+                <div class="w3-left v-center">
+                    Pruisen
+                </div>
+            </li>
+            <li>
+                <div class="w3-left flag ru"></div>
+                <div class="w3-left v-center">
+                    Rusland
+                </div>
+            </li>
+            <li>
+                <div class="w3-left flag pl"></div>
+                <div class="w3-left v-center">
+                    Polen
+                </div>
+            </li>
+            <li>
+                <div class="w3-left flag se"></div>
+                <div class="w3-left v-center">
+                    Zweden
+                </div>
+            </li>
+            <li>
+                <div class="w3-left flag it"></div>
+                <div class="w3-left v-center">
+                    Italië
+                </div>
+            </li>
+            <li>
+                <div class="w3-left flag"></div>
+                <div class="w3-left v-center">
+                    Congres van Wenen*
+                </div>
+            </li>
         </ul>
 
-        <div class="w3-col m9 fh text-sc">
+        <div class="w3-col m8 fh text-sc">
             <div class="window-chat-history w3-bottombar border-dark">
 
                 <div class="chat-bubble perkament">
@@ -443,7 +596,9 @@
 
             <div class="window-chat-box w3-row">
                 <textarea class="w3-col m10 chat-input perkament text-sc" placeholder="typ hier jullie bericht"></textarea>
-                <div class="w3-col m2 chat-send"><i class="far fa-envelope w3-jumbo"></i></div>
+                <div class="w3-col m2 fh">
+                    <div class="button v-center message nl"></div>
+                </div>
             </div>
         </div>
 
@@ -494,10 +649,10 @@
         </p>
         <h5 class="bold">Missie:</h5>
         <p>
-            Jullie gaan als klas de strijd aan met 8 andere klassen om wie de meeste steden kan veroveren in Europa. Gebruik je legers om vijandige steden over te nemen, maar pas op! Laat je eigen steden niet onbeschermd achter.
+            Jullie gaan als klas de strijd aan met 8 andere klassen om wie de meeste steden kan veroveren in Europa. Gebruik je bataljons om vijandige steden over te nemen, maar pas op! Laat je eigen steden niet onbeschermd achter.
         </p>
         <p>
-            Elke dag kan elk leger één opdracht krijgen. Deze mag je zo vaak aanpassen als je wilt. De volgende dag is deze uitgevoerd en kun je een nieuwe opdracht geven. Vergeet niet om je legers en steden aan te vullen met soldaten via de knop <b>rekruteren</b>.
+            Elke dag kan elk bataljon één opdracht krijgen. Deze mag je zo vaak aanpassen als je wilt. De volgende dag is deze uitgevoerd en kun je een nieuwe opdracht geven. Vergeet niet om je bataljons en steden aan te vullen met soldaten via de knop <b>rekruteren</b>.
         </p>
         <p>
             Je kunt extra Goudfrancs en de bonus knoppen vrijspelen door opdrachten te doen. Gebruik voor de opdrachten de knop <b>verhaal</b>.
@@ -511,7 +666,7 @@
         <h5 class="bold">Deze versie:</h5>
         <p>
             Dit is een testversie die momenteel enkel de interface toont zoals die eruit komt te zien voor de speler of klas die Nederland speelt.
-            Je kunt nog geen zetten doen met legers.
+            Je kunt nog geen zetten doen met betaljons.
         </p>
         <p>
             Klik <a ui-sref="main">hier</a> om dit venster te sluiten.

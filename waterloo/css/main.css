@@ -89,11 +89,85 @@ h1, h2, h3, h4, h5, h6
     height: 10%;
 }
 
+.window-list .active
+{
+    background: #333;
+}
+
+
+
 .window-chat-history
 {
     height: 80%;
     overflow-y: auto;
     padding: 8px 16px;
+}
+
+.flag
+{
+    position: relative;
+    width: 50px;
+    height: 33px;
+
+    margin-right: 8px;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+
+.flag.nl
+{
+    background-image: url('../images/flags/nl.png');
+}
+
+.flag.at
+{
+    background-image: url('../images/flags/at.png');
+}
+
+.flag.fr
+{
+    background-image: url('../images/flags/fr.png');
+}
+
+.flag.it
+{
+    background-image: url('../images/flags/it.png');
+}
+
+.flag.news
+{
+    background-image: url('../images/flags/news.png');
+}
+
+.flag.pl
+{
+    background-image: url('../images/flags/pl.png');
+}
+
+.flag.pr
+{
+    background-image: url('../images/flags/pr.png');
+}
+
+.flag.ru
+{
+    background-image: url('../images/flags/ru.png');
+}
+
+.flag.se
+{
+    background-image: url('../images/flags/se.png');
+}
+
+.flag.uk
+{
+    background-image: url('../images/flags/uk.png');
 }
 
 .chat-bubble
@@ -104,6 +178,7 @@ h1, h2, h3, h4, h5, h6
     color: #FFF;
     clear: both;
     line-height: 2;
+    border-radius: 0 8px 8px 8px;
 }
 
 .chat-line
@@ -116,6 +191,7 @@ h1, h2, h3, h4, h5, h6
 .chat-bubble.right
 {
     float: right;
+    border-radius: 8px 0 8px 8px !important;
 }
 
 .recrute-row
@@ -132,11 +208,109 @@ h1, h2, h3, h4, h5, h6
     padding: 8px 16px;
 }
 
-.portrait
+.recrute-icon
+{
+    position: relative;
+    width: 25px;
+    height: 25px;
+
+    margin-right: 8px;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.recrute-icon
+{
+    position: relative;
+    width: 25px;
+    height: 25px;
+
+    margin-right: 8px;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.city.nl
+{
+    background-image: url('../images/icons/city_nl.png');
+}
+
+.army.nl
+{
+    background-image: url('../images/icons/army_nl.png');
+}
+
+.recrute-icon.fort.nl
+{
+    background-image: url('../images/icons/fort_nl.png');
+}
+
+.ttip-content
+{
+    position: absolute;
+    visibility: hidden;
+
+    bottom: 150%;
+
+    width: 100%;
+
+    padding: 2px 4px;
+    color: #FFF;
+    background: #504034;
+    z-index: 3;
+}
+
+.ttip
+{
+    position: relative;
+}
+
+
+.ttip-left
+{
+    position: absolute;
+    visibility: hidden;
+
+    right: 100%;
+
+    width: 100%;
+
+    padding: 4px 8px;
+    color: #FFF;
+    /*background: #504034;*/
+    background: #333;
+
+    z-index: 4;
+}
+
+
+
+.ttip:hover .ttip-content, .ttip:hover .ttip-left
+{
+    visibility: visible;
+}
+
+
+
+
+.data-row
 {
     width: 100%;
     height: 80%;
-    background-size: auto 80%;
+}
+
+.portrait
+{
+    height: 100%;
+    background-size: auto 75%;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -149,6 +323,7 @@ h1, h2, h3, h4, h5, h6
 
 .recrute-btn
 {
+    display: inline-block;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
@@ -157,7 +332,7 @@ h1, h2, h3, h4, h5, h6
     text-align: center;
     color: #FFF;
     background-color: #504034;
-    outline: 1px solid #fff200;
+    border: 1px solid #fff200;
 }
 
 .recrute-btn:hover
@@ -204,18 +379,18 @@ h1, h2, h3, h4, h5, h6
 
 .chat-send
 {
-    height: 100%;
-    background-color: #f06000;
-    text-align: center;
-    cursor: pointer;
-
-}
-.chat-send i
-{
-    display: block;
+    margin: 0 auto;
+    width: 50%;
+    padding-bottom: 50%;
     position: relative;
     top: 50%;
-    transform: translateY(-50%)
+    transform: translateY(-50%);
+
+    cursor: pointer;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+
 }
 
 .window-list li:last-child
@@ -616,6 +791,37 @@ h1, h2, h3, h4, h5, h6
 {
     background-image: url("../images/buttons/help_nl.png");
 }
+
+.fort.nl
+{
+    background-image: url("../images/buttons/fort_nl.png");
+}
+
+.balloon.nl
+{
+    background-image: url("../images/buttons/balloon_nl.png");
+}
+
+.king.nl
+{
+    background-image: url("../images/buttons/king_nl.png");
+}
+
+.spy.nl
+{
+    background-image: url("../images/buttons/spy_nl.png");
+}
+
+.alliance.nl
+{
+    background-image: url("../images/buttons/alliance_nl.png");
+}
+
+.secret.nl
+{
+    background-image: url("../images/buttons/secret_nl.png");
+}
+
 
 /* Utility */
 

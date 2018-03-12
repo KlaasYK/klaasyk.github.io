@@ -249,7 +249,7 @@ app.factory('canvas', ['$http', function($http)
         backctx.drawImage(images['map'], 0, 0, MAP_WIDTH, MAP_HEIGHT);
         backctx.restore();
 
-        backctx.drawImage(images['nl-city'],
+        backctx.drawImage(images['city-nl'],
             900 + 350 - ICON_OFFSET, 1300 + 175 - ICON_OFFSET, ICON_SIZE, ICON_SIZE);
 
         o.redraw(true);
